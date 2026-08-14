@@ -108,6 +108,15 @@ class Pokemon {
             $this->hp = $dados['hp'];
             $this->atk = $dados['atk'];
             $this->def = $dados['def'];
+            $this->spatk = $dados['spatk'];
+            $this->spdef = $dados['spdef'];
+            $this->spe = $dados['spe'];
+            $this->acc = $dados['acc'];
+            $this->evas = $dados['evas'];
+            $this->bst = $dados['bst'];
+            $this->tipo = $dados['tipo'];
+            $this->item = $dados['item'];
+            $this->habilidade = $dados['habilidade'];
             return true;
         }
         return false;
