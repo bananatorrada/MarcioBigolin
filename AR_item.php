@@ -34,7 +34,7 @@ class Item {
                 ':id_item' => $this->id_item
             ]);
         } else {
-            $sql = "INSERT INTO item (nome_item, descricao, buffs) VALUES (:n_item, :d, :s, :b)";
+            $sql = "INSERT INTO item (nome_item, descricao, buffs) VALUES (:n_item, :d, :b)";
             $stmt = $this->pdo->prepare($sql);
             $ok = $stmt->execute([
                 ':n_item' => $this->nome_item,

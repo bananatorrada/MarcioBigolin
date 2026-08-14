@@ -74,7 +74,7 @@ class Pokemon {
                 ':id_pokemon' => $this->id_pokemon
             ]);
         } else {
-            $sql = "INSERT INTO Pokemon (nome_pokemon, hp, atk, def, spatk, spdef, spe, acc, evas, bst, t, i, h) VALUES (:n_pokemon)";
+            $sql = "INSERT INTO Pokemon (nome_pokemon, hp, atk, def, spatk, spdef, spe, acc, evas, bst, t, i, h) VALUES (:n_pokemon, :hp, :atk, :def, :spatk, :spdef, :spe, :acc, :evas, :bst, :t, :i, :h)";
             $stmt = $this->pdo->prepare($sql);
             $ok = $stmt->execute([
                 ':n_pokemon' => $this->nome_pokemon,

@@ -42,7 +42,7 @@ class Habilidade {
                 ':id_habilidade' => $this->id_habilidade
             ]);
         } else {
-            $sql = "INSERT INTO habilidade (nome_habilidade, descricao, dano, efeito_colateral, chance_efeito) VALUES (:n_habilidade, :d, :s, :da, :e, :c)";
+            $sql = "INSERT INTO habilidade (nome_habilidade, descricao, dano, efeito_colateral, chance_efeito) VALUES (:n_habilidade, :d, :da, :e, :c)";
             $stmt = $this->pdo->prepare($sql);
             $ok = $stmt->execute([
                 ':n_habilidade' => $this->nome_habilidade,

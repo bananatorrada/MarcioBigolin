@@ -30,7 +30,7 @@ class Tipo {
                 ':id_tipo' => $this->id_tipo
             ]);
         } else {
-            $sql = "INSERT INTO Tipo (nome_tipo, descricao) VALUES (:n_tipo, :d, :s, :p)";
+            $sql = "INSERT INTO Tipo (nome_tipo, descricao) VALUES (:n_tipo, :d)";
             $stmt = $this->pdo->prepare($sql);
             $ok = $stmt->execute([
                 ':n_tipo' => $this->nome_tipo,
